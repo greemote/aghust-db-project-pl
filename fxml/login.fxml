@@ -29,12 +29,12 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </opaqueInsets>
       </HBox>
-      <GridPane alignment="CENTER" layoutX="24.0" layoutY="168.0" prefHeight="224.0" prefWidth="672.0" AnchorPane.bottomAnchor="168.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="24.0" AnchorPane.topAnchor="168.0">
+      <GridPane alignment="CENTER" layoutX="20.0" layoutY="169.0" prefHeight="143.0" prefWidth="600.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="167.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="143.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.9999694824219" minWidth="10.0" prefWidth="145.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="58.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="157.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="123.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.9999694824219" minWidth="10.0" prefWidth="119.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="51.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="248.0" minWidth="10.0" prefWidth="86.0" />
         </columnConstraints>
         <rowConstraints>
@@ -75,12 +75,12 @@
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </PasswordField>
-            <Button layoutX="624.0" layoutY="71.0" mnemonicParsing="false" onAction="#clientLogin" text="loguj" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button layoutX="624.0" layoutY="71.0" mnemonicParsing="false" onAction="#clientLogin" prefHeight="28.0" prefWidth="64.0" text="loguj" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#register" text="rejestracja" GridPane.columnIndex="4" GridPane.rowIndex="2">
+            <Button mnemonicParsing="false" onAction="#register" prefHeight="28.0" prefWidth="121.0" text="rejestracja" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
@@ -95,7 +95,7 @@
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </PasswordField>
-            <Button layoutX="532.0" layoutY="71.0" mnemonicParsing="false" onAction="#workerLogin" text="loguj" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button layoutX="532.0" layoutY="71.0" mnemonicParsing="false" onAction="#workerLogin" prefHeight="28.0" prefWidth="73.0" text="loguj" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
@@ -110,7 +110,7 @@
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </PasswordField>
-            <Button layoutX="532.0" layoutY="101.0" mnemonicParsing="false" onAction="#adminLogin" text="loguj" GridPane.columnIndex="3" GridPane.rowIndex="4">
+            <Button layoutX="532.0" layoutY="101.0" mnemonicParsing="false" onAction="#adminLogin" prefHeight="28.0" prefWidth="78.0" text="loguj" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
