@@ -2,9 +2,7 @@ package controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import main.Alert;
 import main.ConnectionVariable;
 import main.SwitchScene;
 
@@ -46,5 +44,26 @@ public class AdminPanelController
     {
         LoginController.adminId = 0;
         SwitchScene.switchScene(event, "login.fxml");
+    }
+
+    @FXML
+    public void addDirector(ActionEvent event)
+    {
+        SwitchScene.switchScene(event, "addDirector.fxml");
+    }
+    @FXML
+    public void addActor(ActionEvent event)
+    {
+        SwitchScene.switchScene(event, "addActor.fxml");
+    }
+    @FXML
+    public void addMovie(ActionEvent event)
+    {
+        SwitchScene.switchScene(event, "addMovie.fxml");
+    }
+    @FXML
+    public void displayMovies(ActionEvent event)
+    {
+        SwitchScene.switchScene(event, "viewMovies.fxml");
     }
 }
