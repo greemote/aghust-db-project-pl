@@ -37,7 +37,7 @@ RETURNS INTEGER AS
 $$
     DECLARE id INTEGER;
     BEGIN
-        SELECT INTO id id_klient FROM BD_projekt.klient ORDER BY id_klient DESC LIMIT 1;
+        SELECT INTO id MAX(id_klient) FROM BD_projekt.klient;
         IF(id IS NULL) THEN
             RETURN 0;
         ELSE
@@ -52,7 +52,7 @@ RETURNS INTEGER AS
 $$
     DECLARE id INTEGER;
     BEGIN
-        SELECT INTO id id_rezyser FROM BD_projekt.rezyser ORDER BY id_rezyser DESC LIMIT 1;
+        SELECT INTO id MAX(id_rezyser) FROM BD_projekt.rezyser;
         IF(id IS NULL) THEN
             RETURN 0;
         ELSE
@@ -67,7 +67,7 @@ RETURNS INTEGER AS
 $$
     DECLARE id INTEGER;
     BEGIN
-        SELECT INTO id id_aktor FROM BD_projekt.aktor ORDER BY id_aktor DESC LIMIT 1;
+        SELECT INTO id MAX(id_aktor) FROM BD_projekt.aktor;
         IF(id IS NULL) THEN
             RETURN 0;
         ELSE
@@ -82,7 +82,52 @@ RETURNS INTEGER AS
 $$
     DECLARE id INTEGER;
     BEGIN
-        SELECT INTO id id_film FROM BD_projekt.film ORDER BY id_film DESC LIMIT 1;
+        SELECT INTO id MAX(id_film) FROM BD_projekt.film;
+        IF(id IS NULL) THEN
+            RETURN 0;
+        ELSE
+            RETURN id;
+        END IF;
+    END
+$$
+LANGUAGE 'plpgsql';
+
+CREATE OR REPLACE FUNCTION getLastShowId()
+RETURNS INTEGER AS
+$$
+    DECLARE id INTEGER;
+    BEGIN
+        SELECT INTO id MAX(id_seans) FROM BD_projekt.seans;
+        IF(id IS NULL) THEN
+            RETURN 0;
+        ELSE
+            RETURN id;
+        END IF;
+    END
+$$
+LANGUAGE 'plpgsql';
+
+CREATE OR REPLACE FUNCTION getLastPaymentId()
+RETURNS INTEGER AS
+$$
+    DECLARE id INTEGER;
+    BEGIN
+        SELECT INTO id MAX(id_platnosc) FROM BD_projekt.platnosc;
+        IF(id IS NULL) THEN
+            RETURN 0;
+        ELSE
+            RETURN id;
+        END IF;
+    END
+$$
+LANGUAGE 'plpgsql';
+
+CREATE OR REPLACE FUNCTION getLastWorkerId()
+RETURNS INTEGER AS
+$$
+    DECLARE id INTEGER;
+    BEGIN
+        SELECT INTO id MAX(id_pracownik) FROM BD_projekt.pracownik;
         IF(id IS NULL) THEN
             RETURN 0;
         ELSE

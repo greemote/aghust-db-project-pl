@@ -10,7 +10,7 @@ VALUES
 
 INSERT INTO forma_platnosci (id_forma, nazwa)
 VALUES
-(1, 'gotowka'),
+(1, 'gotówka'),
 (2, 'karta'),
 (3, 'przelew');
 
