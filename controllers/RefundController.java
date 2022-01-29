@@ -6,6 +6,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import main.Alert;
 import main.ConnectionVariable;
+import main.GetId;
 import main.SwitchScene;
 import java.sql.*;
 
@@ -75,10 +76,10 @@ public class RefundController
             }
 
             PreparedStatement pst = ConnectionVariable.c.prepareStatement("delete from bd_projekt.bilet where id_bilet = ?");
-            pst.setInt(1, LoginController.clientId);
+            pst.setInt(1, GetId.getId(chooseTicket.getValue()));
             pst.executeUpdate();
             pst = ConnectionVariable.c.prepareStatement("delete from bd_projekt.platnosc where id_platnosc = ?");
-            pst.setInt(1, LoginController.clientId);
+            pst.setInt(1, GetId.getId(chooseTicket.getValue()));
             pst.executeUpdate();
 
             Alert.alert1("dokonano zwrotu!");
