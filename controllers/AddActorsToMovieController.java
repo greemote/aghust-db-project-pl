@@ -50,7 +50,7 @@ public class AddActorsToMovieController
         try
         {
             PreparedStatement pst = ConnectionVariable.c.prepareStatement("SELECT COUNT(*) FROM BD_projekt.aktor_film WHERE id_aktor = ? AND id_film = ?");
-            pst.setInt(1, chooseActor.getValue().charAt(1) - '0');
+            pst.setInt(1, main.GetId.getId(chooseActor.getValue()));
             pst.setInt(2, AddMovieController.idMovie);
             ResultSet rs = pst.executeQuery();
             rs.next();
@@ -63,7 +63,7 @@ public class AddActorsToMovieController
             }
             pst = ConnectionVariable.c.prepareStatement("INSERT INTO BD_projekt.aktor_film VALUES (?, ?)");
             pst.setInt(1, AddMovieController.idMovie);
-            pst.setInt(2, chooseActor.getValue().charAt(1) - '0');
+            pst.setInt(2, main.GetId.getId(chooseActor.getValue()));
             pst.executeUpdate();
 
             rs.close();

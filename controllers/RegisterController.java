@@ -101,7 +101,7 @@ public class RegisterController
             }
             catch(SQLException e)
             {
-                System.out.println("ERROR");
+                Alert.alert1("wystąpił błąd");
             }
         }
     }

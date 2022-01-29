@@ -48,4 +48,25 @@ public class ClientPanelController
         LoginController.clientId = 0;
         SwitchScene.switchScene(event, "login.fxml");
     }
+    @FXML
+    void changePassword(ActionEvent event)
+    {
+        SwitchScene.switchScene(event, "clientChangePassword.fxml");
+    }
+
+    @FXML
+    void buyTicket(ActionEvent event)
+    {
+        SwitchScene.switchScene(event, "buyTicket1.fxml");
+    }
+    @FXML
+    void refundTicket(ActionEvent event)
+    {
+        SwitchScene.switchScene(event, "refund.fxml");
+    }
+    @FXML
+    void myTickets(ActionEvent event)
+    {
+        SwitchScene.switchScene(event, "viewTickets.fxml");
+    }
 }

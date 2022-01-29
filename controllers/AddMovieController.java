@@ -92,9 +92,9 @@ public class AddMovieController
             newId = 1 + rs.getInt(1);
             PreparedStatement pst = ConnectionVariable.c.prepareStatement("INSERT INTO BD_projekt.film VALUES (?, ?, ?, ?, ?)");
             pst.setInt(1, newId);
-            pst.setInt(2, chooseDirector.getValue().charAt(1) - '0');
-            pst.setInt(3, chooseGenre.getValue().charAt(1) - '0');
-            pst.setInt(4, chooseAgeCategory.getValue().charAt(1) - '0');
+            pst.setInt(2, main.GetId.getId(chooseDirector.getValue()));
+            pst.setInt(3, main.GetId.getId(chooseGenre.getValue()));
+            pst.setInt(4, main.GetId.getId(chooseAgeCategory.getValue()));
             pst.setString(5, title.getText());
             pst.executeUpdate();
 

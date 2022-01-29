@@ -112,6 +112,6 @@ public class LoginController
             }
             rs.close();
             pst.close();
-        } catch(SQLException e){ System.out.println("ERROR"); }
+        } catch(SQLException e){  Alert.alert1("wystąpił błąd"); }
     }
 }
