@@ -78,22 +78,22 @@
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="100.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="260.0" text="dodaj seans" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button layoutX="10.0" layoutY="100.0" mnemonicParsing="false" onAction="#addShow" prefHeight="28.0" prefWidth="260.0" text="dodaj seans" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="210.0" layoutY="40.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="260.0" text="usuń seans" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button layoutX="210.0" layoutY="40.0" mnemonicParsing="false" onAction="#deleteShow" prefHeight="28.0" prefWidth="260.0" text="usuń seans" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="210.0" layoutY="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="260.0" text="dodaj konto pracownika" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button layoutX="210.0" layoutY="70.0" mnemonicParsing="false" onAction="#addWorker" prefHeight="28.0" prefWidth="260.0" text="dodaj konto pracownika" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="410.0" layoutY="76.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="260.0" text="usuń konto pracownika" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button layoutX="410.0" layoutY="76.0" mnemonicParsing="false" onAction="#deleteWorker" prefHeight="28.0" prefWidth="260.0" text="usuń konto pracownika" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
@@ -103,12 +103,12 @@
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="10.0" layoutY="185.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="260.0" text="wyświetl seanse" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Button layoutX="10.0" layoutY="185.0" mnemonicParsing="false" onAction="#displayShows" prefHeight="28.0" prefWidth="260.0" text="wyświetl seanse" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
             </Button>
-            <Button layoutX="210.0" layoutY="185.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="260.0" text="wyświetl pracowników" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Button layoutX="210.0" layoutY="185.0" mnemonicParsing="false" onAction="#displayWorkers" prefHeight="28.0" prefWidth="260.0" text="wyświetl pracowników" GridPane.columnIndex="2" GridPane.rowIndex="6">
                <font>
                   <Font name="Lato Bold Italic" size="14.0" />
                </font>
@@ -116,6 +116,11 @@
          </children>
       </GridPane>
       <Button layoutX="14.0" layoutY="438.0" mnemonicParsing="false" onAction="#logout" text="wyloguj">
+         <font>
+            <Font name="Lato Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="537.0" layoutY="438.0" mnemonicParsing="false" onAction="#changePassword" text="zmień hasło">
          <font>
             <Font name="Lato Bold Italic" size="14.0" />
          </font>

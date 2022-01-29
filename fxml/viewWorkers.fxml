@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480" prefWidth="640" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewMoviesController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480" prefWidth="640" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewWorkersController">
     <children>
         <HBox prefHeight="45.0" prefWidth="640.0" style="-fx-background-color: DEEPPINK;">
             <children>
@@ -26,7 +26,7 @@
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
             </opaqueInsets>
         </HBox>
-        <Label layoutX="14.0" layoutY="55.0" text="wszystkie filmy w bazie">
+        <Label layoutX="14.0" layoutY="55.0" text="pracownicy">
             <font>
                 <Font name="Lato Bold Italic" size="14.0" />
             </font>
@@ -36,14 +36,16 @@
                 <Font name="Lato Bold Italic" size="14.0" />
             </font>
         </Button>
-      <TableView fx:id="movieTable" layoutX="20.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="600.0">
-        <columns>
-          <TableColumn fx:id="title" maxWidth="150.0" prefWidth="150.0" text="tytuł" />
-          <TableColumn fx:id="director" maxWidth="150.0" prefWidth="150.0" text="reżyser" />
-            <TableColumn fx:id="genre" maxWidth="150.0" prefWidth="150.0" text="gatunek" />
-            <TableColumn fx:id="ageCategory" maxWidth="148.0" prefWidth="150.0" text="kategoria wiekowa" />
-        </columns>
-      </TableView>
+        <TableView fx:id="showTable" layoutX="20.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="cinema" prefWidth="100.0" text="kino" />
+                <TableColumn fx:id="name" maxWidth="150.0" prefWidth="100.0" text="imię " />
+                <TableColumn fx:id="surname" prefWidth="100.0" text="nazwisko" />
+                <TableColumn fx:id="email" prefWidth="100.0" text="e-mail" />
+                <TableColumn fx:id="phone" prefWidth="98.0" text="telefon" />
+            </columns>
+        </TableView>
     </children>
     <opaqueInsets>
         <Insets />

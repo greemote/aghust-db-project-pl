@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480" prefWidth="640" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SelectCinemaController">
+    <children>
+        <HBox prefHeight="45.0" prefWidth="640.0" style="-fx-background-color: DEEPPINK;">
+            <children>
+                <Label alignment="CENTER" prefHeight="126.0" prefWidth="640.0" text="system zarządzania biletami i siecią kin" textAlignment="CENTER">
+                    <font>
+                        <Font name="Lato Bold Italic" size="24.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </opaqueInsets>
+                </Label>
+            </children>
+            <opaqueInsets>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </opaqueInsets>
+        </HBox>
+        <Label layoutX="14.0" layoutY="55.0" text="dodaj seans">
+            <font>
+                <Font name="Lato Bold Italic" size="14.0" />
+            </font>
+        </Label>
+        <Button layoutX="14.0" layoutY="438.0" mnemonicParsing="false" onAction="#back" text="wróć">
+            <font>
+                <Font name="Lato Bold Italic" size="14.0" />
+            </font>
+        </Button>
+        <GridPane layoutX="196.0" layoutY="218.0" prefHeight="45.0" prefWidth="248.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.0" minWidth="10.0" prefWidth="153.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="151.0" minWidth="3.0" prefWidth="57.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button mnemonicParsing="false" onAction="#selectCinema" prefHeight="28.0" prefWidth="129.0" text="wybierz" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="Lato Bold Italic" size="14.0" />
+                    </font>
+                </Button>
+                <ChoiceBox fx:id="chooseCinema" prefHeight="25.0" prefWidth="188.0" GridPane.rowIndex="1" />
+                <Label prefHeight="18.0" prefWidth="156.0" text="proszę wybrać kino">
+                    <font>
+                        <Font name="Lato Bold Italic" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</AnchorPane>
