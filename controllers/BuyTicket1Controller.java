@@ -3,6 +3,8 @@ package controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import main.Alert;
 import main.ConnectionVariable;
 import main.SwitchScene;
@@ -13,8 +15,11 @@ public class BuyTicket1Controller
     @FXML
     ChoiceBox<String> chooseCinema;
     @FXML
-    ChoiceBox<String> chooseMovie;
+    ComboBox<String> chooseMovie;
+    @FXML
+    Label cast;
     int count;
+    String temp = "";
     static public int idCinema;
     static public int idMovie;
 
@@ -55,6 +60,8 @@ public class BuyTicket1Controller
     @FXML
     void back(ActionEvent event)
     {
+        idMovie = 0;
+        idCinema = 0;
         SwitchScene.switchScene(event, "clientPanel.fxml");
     }
 
@@ -77,5 +84,28 @@ public class BuyTicket1Controller
         {
             System.out.println("ERROR");
         }
+    }
+
+    @FXML
+    void action()
+    {
+        temp = "";
+        cast.setText("");
+        try
+        {
+            idMovie = main.GetId.getId(chooseMovie.getValue());
+            PreparedStatement pst = ConnectionVariable.c.prepareStatement("select imie, nazwisko from bd_projekt.aktor a, bd_projekt.aktor_film af where a.id_aktor = af.id_aktor and af.id_film = ?", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            pst.setInt(1, idMovie);
+            ResultSet rs = pst.executeQuery();
+            while(rs.next())
+            {
+                temp = temp + rs.getString(1) + " " + rs.getString(2) + "\n";
+            }
+            cast.setText(temp);
+
+            pst.close();
+            rs.close();
+        }
+        catch (SQLException e){ System.out.println("ERROR"); }
     }
 }
